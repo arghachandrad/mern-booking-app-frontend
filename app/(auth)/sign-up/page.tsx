@@ -35,7 +35,7 @@ export default function SignUpPage() {
     },
     onSuccess(data, variables, context) {
       // console.log(data);
-      queryClient.invalidateQueries({ queryKey: ["validateToken"] });
+      // queryClient.invalidateQueries({ queryKey: ["validateToken"] });
       router.push("/");
       reset();
     },
