@@ -1,9 +1,8 @@
-import { Raleway } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 
-export default function AuthLayout({
+export default function ProtectedLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -12,7 +11,7 @@ export default function AuthLayout({
     <div className="flex flex-col w-full h-screen">
       <Navbar />
       <main className="flex-1">
-        <Container isPaddingY={false}>{children}</Container>
+        <Container>{children}</Container>
       </main>
       <Footer />
     </div>

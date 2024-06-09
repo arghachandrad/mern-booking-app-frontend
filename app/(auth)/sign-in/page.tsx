@@ -35,7 +35,7 @@ export default function SignIpPage() {
       });
     },
     onSuccess(data, variables, context) {
-      // queryClient.invalidateQueries({ queryKey: ["validateToken"] });
+      queryClient.invalidateQueries({ queryKey: ["validateToken"] });
       router.push("/");
       reset();
     },
